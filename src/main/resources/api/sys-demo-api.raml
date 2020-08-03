@@ -1,0 +1,26 @@
+#%RAML 1.0
+title: Demonstration System API
+description: Demonstration System API
+version: v1
+mediaType: 
+  - application/json
+protocols:
+  - HTTP
+/demos:
+  displayName: Demonstrations
+  description: Collection of Demonstrations
+  get:
+    responses:
+      200:
+        body:
+          application/json:
+            type: array
+            items:
+              type: object
+              properties:
+                description:
+                  type: string
+                  example: "MuleSoft 101 Demo: Building APIs"              
+                url:
+                  type: string
+                  example: "https://www.youtube.com/watch?v=b7Ecn-z8ArY"
